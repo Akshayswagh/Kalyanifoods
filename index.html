@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalyani Foods - Delicious Ice Creams & Kulfi</title>
+    <!-- Link to Font Awesome for icons (Hamburger, Search, Cart, Social Media) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ==================== HEADER & NAVBAR (Common across pages) ==================== -->
+    <header class="main-header">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="Images/logo.jpeg" alt="logo" style="width: 100px"
+          /></a>
+          <!-- Your logo text or image here -->
+        </div>
+        <nav class="main-nav" id="mainNav">
+          <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="franchise.html">Franchise</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="nav-icons">
+          <div class="search-icon"><i class="fas fa-search"></i></div>
+          <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </div>
+          <div class="hamburger-menu" id="hamburgerMenu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==================== HERO SECTION (Carousel) ==================== -->
+    <section class="hero-carousel">
+      <div class="carousel-inner">
+        <div
+          class="carousel-item active"
+          style="background-image: url('Images/HomePage/slider1.jpg')"
+        >
+          <!-- <div class="carousel-content">
+                    <h1>Taste the Tradition. Pure Dairy Delights.</h1>
+                    <p>Experience the rich flavors of Kalyani Foods.</p>
+                    <a href="products.html" class="btn btn-primary">Shop Now</a>
+                </div> -->
+        </div>
+        <div
+          class="carousel-item"
+          style="background-image: url('/Images/HomePage/slider2.jpg')"
+        >
+          <!-- <div class="carousel-content">
+                    <h1>Indulge in Our Special Kulfi!</h1>
+                    <p>Handcrafted with love, just for you.</p>
+                    <a href="products.html" class="btn btn-primary">View Kulfi Range</a>
+                </div> -->
+        </div>
+        <div
+          class="carousel-item"
+          style="background-image: url('/Images/HomePage/slider2.jpg')"
+        >
+          <!-- <div class="carousel-content">
+                    <h1>Freshly Made, Unforgettable Flavors.</h1>
+                    <p>From our kitchen to your heart.</p>
+                    <a href="products.html" class="btn btn-primary">Explore Flavors</a>
+                </div> -->
+        </div>
+      </div>
+      <button class="carousel-control prev" aria-label="Previous slide">
+        &#10094;
+      </button>
+      <button class="carousel-control next" aria-label="Next slide">
+        &#10095;
+      </button>
+    </section>
+
+    <!-- ==================== PRODUCT CATEGORY SECTIONS ==================== -->
+    <main class="container content-area">
+      <section class="product-category" id="ice-creams">
+        <h2>Water Based Ice Lolly</h2>
+        <div class="product-grid">
+          <!-- Product Card 1 -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA0HtVSwJdNJIwSsYUT3T3mniz2t7LImIETg&s"
+              alt="ORANGE ICE LOLLY"
+            />
+            <h3>ORANGE ICE LOLLY</h3>
+            <p class="product-description">
+              Made From Filtered RO Water, Sugar & Orange Flavour
+            </p>
+            <p class="price">₹ 2 / piece</p>
+
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA0HtVSwJdNJIwSsYUT3T3mniz2t7LImIETg&s"
+              alt="KALA KHATTA ICE LOLLY"
+            />
+            <h3>KALA KHATTA ICE LOLLY</h3>
+            <p class="product-description">
+              Made From Filtered RO Water, Sugar & Kala Khatta Flavour
+            </p>
+            <p class="price">₹ 2 / piece</p>
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+          <!-- Product Card 3 -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA0HtVSwJdNJIwSsYUT3T3mniz2t7LImIETg&s"
+              alt="Badam Kulfi"
+            />
+            <h3>ORANGE ICE LOLLY BAG</h3>
+            <p class="product-description">
+              Made From Filtered RO Water, Sugar & Orange Flavour
+            </p>
+            <p class="price">₹ 500 / piece</p>
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+
+          <!-- Add more ice cream product cards here -->
+        </div>
+        <div class="view-all">
+          <a href="IceCreams.html" class="btn btn-secondary">View All </a>
+        </div>
+      </section>
+
+      <section class="product-category" id="kulfi">
+        <h2>Milk Based ice lolly</h2>
+        <div class="product-grid">
+          <!-- Kulfi Product Card 1 -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA0HtVSwJdNJIwSsYUT3T3mniz2t7LImIETg&s"
+              alt="Badam Kulfi"
+            />
+            <h3>PISTA ICE LOLLY</h3>
+            <p class="product-description">
+              Made From Full Cream Milk, Sugar & Pista Flavour
+            </p>
+            <p class="price">₹ 3 / piece</p>
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+          <!-- Kulfi Product Card 2 -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA0HtVSwJdNJIwSsYUT3T3mniz2t7LImIETg&s"
+              alt="MANGO ICE LOLLY"
+            />
+            <h3>MANGO ICE LOLLY</h3>
+            <p class="product-description">
+              Made From Full Cream Milk, Sugar & Alphanso Mango Pulp
+            </p>
+            <p class="price">₹ 5 / piece</p>
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+          <!-- Kulfi Product Card 3 -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA0HtVSwJdNJIwSsYUT3T3mniz2t7LImIETg&s"
+              alt="CHOCOLATE ICE LOLLY"
+            />
+            <h3>CHOCOLATE ICE LOLLY</h3>
+            <p class="product-description">
+              Made From Full Cream Milk, Sugar, Cocoa Powder & Drinking
+              Chocolate
+            </p>
+            <p class="price">₹ 5 / piece</p>
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+          <!-- Add more kulfi product cards here -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA0HtVSwJdNJIwSsYUT3T3mniz2t7LImIETg&s"
+              alt="CHOCOLATE ICE LOLLY"
+            />
+            <h3>STRAWBERRY ICE LOLLY</h3>
+            <p class="product-description">
+              Made From Full Cream Milk, Sugar, Cocoa Powder & Drinking
+              Chocolate
+            </p>
+            <p class="price">₹ 5 / piece</p>
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA0HtVSwJdNJIwSsYUT3T3mniz2t7LImIETg&s"
+              alt="CHOCOLATE ICE LOLLY"
+            />
+            <h3>MALAI ICE LOLLY</h3>
+            <p class="product-description">
+              Made From Full Cream Milk, Sugar & Fresh Cream Made From Full
+              Cream Milk, Sugar, Cocoa Powder & Drinking Chocolate
+            </p>
+            <p class="price">₹ 5 / piece</p>
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA0HtVSwJdNJIwSsYUT3T3mniz2t7LImIETg&s"
+              alt="CHOCOLATE ICE LOLLY"
+            />
+            <h3>MIX ICE LOLLY (30 pieces)</h3>
+            <p class="product-description">
+              Orange Ice Lolly - 5 pcs, Pista Ice Lolly - 5 pcs, Mango Ice Lolly
+              - 5 pcs, Chocolate Ice Lolly - 5 pcs, Strawberry Ice Lolly - 5
+              pcs, Malai Ice Lolly - 5 pcs
+            </p>
+            <p class="price">₹ 150 / piece</p>
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="view-all">
+          <a href="products.html#kulfi" class="btn btn-secondary">View All </a>
+        </div>
+      </section>
+
+      <section class="product-category" id="kulfi">
+        <h2>Milk products</h2>
+        <div class="product-grid">
+          <!-- Kulfi Product Card 1 -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1mBC-EFDrjKu5Cc_IwCesYSgUL5qT0KfRQ&s"
+              alt="Badam Kulfi"
+            />
+            <h3>SPECIAL LASSI</h3>
+            <p class="product-description">
+              Made From Full Cream Milk, Sugar, curd, Cardamom & Added Flavours
+            </p>
+            <p class="price">₹ 30 / piece</p>
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+          <!-- Kulfi Product Card 2 -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1mBC-EFDrjKu5Cc_IwCesYSgUL5qT0KfRQ&s"
+              alt="Badam Kulfi"
+            />
+            <h3>MANGO LASSI</h3>
+            <p class="product-description">
+              Made From Full Cream Milk, Sugar, Curd, Cardamom & Alphanso Mango
+              Pulp
+            </p>
+            <p class="price">₹ 35 / piece</p>
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+          <!-- Kulfi Product Card 3 -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1mBC-EFDrjKu5Cc_IwCesYSgUL5qT0KfRQ&s"
+              alt="Badam Kulfi"
+            />
+            <h3>GULKAND LASSI</h3>
+            <p class="product-description">
+              Made From Full Cream Milk, Sugar, Curd, Cardamom & Fresh Rose
+              Gulkand
+            </p>
+            <p class="price">₹ 35 / piece</p>
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+          <!-- Add more kulfi product cards here -->
+          <!-- Kulfi Product Card 4 -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1mBC-EFDrjKu5Cc_IwCesYSgUL5qT0KfRQ&s"
+              alt="Badam Kulfi"
+            />
+            <h3>KESAR DRYFRUIT LASSI</h3>
+            <p class="product-description">
+              Made From Full Cream Milk, Sugar, Curd, Cardamom, Cashew, Almond,
+              Pistachio & Saffron
+            </p>
+            <p class="price">₹ 50 / piece</p>
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+          <!-- Kulfi Product Card 5 -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1mBC-EFDrjKu5Cc_IwCesYSgUL5qT0KfRQ&s"
+              alt="Badam Kulfi"
+            />
+            <h3>BADAM SHAKE</h3>
+            <p class="product-description">
+              Made From Full Cream Milk, Sugar, Cardamom, Almond & Saffron
+            </p>
+            <p class="price">₹ 40 / piece</p>
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+          <!-- Kulfi Product Card 6 -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1mBC-EFDrjKu5Cc_IwCesYSgUL5qT0KfRQ&s"
+              alt="Badam Kulfi"
+            />
+            <h3>BASUNDI</h3>
+            <p class="product-description">
+              Made From Full Cream Milk, Sugar, Cardamom & Pistachio.
+            </p>
+            <p class="price">₹ 30 / piece</p>
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1mBC-EFDrjKu5Cc_IwCesYSgUL5qT0KfRQ&s"
+              alt="Badam Kulfi"
+            />
+            <h3>MALAI MATKA</h3>
+            <p class="product-description">
+              Made From Full Cream Milk, Sugar, Cardamom, Cashew, Almond &
+              Pistachio.
+            </p>
+            <p class="price">₹ 30 / piece</p>
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="view-all">
+          <a href="products.html#kulfi" class="btn btn-secondary">View All </a>
+        </div>
+      </section>
+
+      <section class="product-category" id="kulfi">
+        <h2>Celebrations</h2>
+        <div class="product-grid">
+          <!-- Kulfi Product Card 1 -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1mBC-EFDrjKu5Cc_IwCesYSgUL5qT0KfRQ&s"
+              alt="Badam Kulfi"
+            />
+            <h3>01 SPIDER MAN CAKE 1 KG</h3>
+            <p class="product-description">
+           Butterscotch, chocolate, painapple, strawberry flavors.
+            </p>
+           <p class="price">₹ 550 / piece</p> 
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+          <!-- Kulfi Product Card 2 -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1mBC-EFDrjKu5Cc_IwCesYSgUL5qT0KfRQ&s"
+              alt="Badam Kulfi"
+            />
+            <h3>02 DORAEMON CAKE 1 KG</h3>
+            <p class="product-description">
+              Butterscotch, chocolate, painapple, strawberry flavors.
+            </p>
+             <p class="price">₹ 550 / piece</p> 
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+          <!-- Kulfi Product Card 3 -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1mBC-EFDrjKu5Cc_IwCesYSgUL5qT0KfRQ&s"
+              alt="Badam Kulfi"
+            />
+            <h3>03 BLACK FOREST CAKE 1 KG</h3>
+            <p class="product-description">
+          CHCOLATE + VANILLA MIX
+            </p>
+              <p class="price">₹ 550 / piece</p> 
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+          <!-- Add more kulfi product cards here -->
+          <!-- Kulfi Product Card 4 -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1mBC-EFDrjKu5Cc_IwCesYSgUL5qT0KfRQ&s"
+              alt="Badam Kulfi"
+            />
+            <h3>04 HEART SHAPE CAKE 1 KG</h3>
+            <p class="product-description">
+            Butterscotch, chocolate, painapple, strawberry flavors.
+            </p>
+              <p class="price">₹ 550 / piece</p> 
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+          <!-- Kulfi Product Card 5 -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1mBC-EFDrjKu5Cc_IwCesYSgUL5qT0KfRQ&s"
+              alt="Badam Kulfi"
+            />
+            <h3>05 WHITE FOREST CAKE 1 KG</h3>
+            <p class="product-description">
+          VANILLA FLAVOURS
+            </p>
+               <p class="price">₹ 550 / piece</p> 
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+          <!-- Kulfi Product Card 6 -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1mBC-EFDrjKu5Cc_IwCesYSgUL5qT0KfRQ&s"
+              alt="Badam Kulfi"
+            />
+            <h3>06 RASMALAI CAKE 1 KG</h3>
+            <p class="product-description">
+           Rasmalai with vanilla flavors Cake
+            </p>
+           <p class="price">₹ 600 / piece</p> 
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+
+          <!-- /////////////////////////// -->
+             <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1mBC-EFDrjKu5Cc_IwCesYSgUL5qT0KfRQ&s"
+              alt="Badam Kulfi"
+            />
+            <h3>07 MICKEY MOUSE CAKE 1.5 KG</h3>
+            <p class="product-description">
+         Butterscotch, chocolate, painapple, strawberry flavors.
+            </p>
+           <p class="price">₹ 850 / piece</p> 
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>  <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1mBC-EFDrjKu5Cc_IwCesYSgUL5qT0KfRQ&s"
+              alt="Badam Kulfi"
+            />
+            <h3>08 CHOCO CHIPS CAKE 1 KG</h3>
+            <p class="product-description">
+         Vanilla + chocolate flavors.
+            </p>
+           <p class="price">₹ 550 / piece</p> 
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>  <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1mBC-EFDrjKu5Cc_IwCesYSgUL5qT0KfRQ&s"
+              alt="Badam Kulfi"
+            />
+            <h3>09 DOLL CAKE 1 KG</h3>
+            <p class="product-description">
+        Butterscotch, chocolate, painapple, strawberry flavors.
+            </p>
+           <p class="price">₹ 600 / piece</p> 
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>  <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1mBC-EFDrjKu5Cc_IwCesYSgUL5qT0KfRQ&s"
+              alt="Badam Kulfi"
+            />
+            <h3>10 DOLL CAKE 1.5 KG</h3>
+            <p class="product-description">
+        Butterscotch, chocolate, painapple, strawberry flavors.
+            </p>
+           <p class="price">₹ 900 / piece</p> 
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>  
+         
+        </div>
+        <div class="view-all">
+          <a href="products.html#kulfi" class="btn btn-secondary"
+            >View All Celebrations</a
+          >
+        </div>
+      </section>
+      <section class="product-category" id="kulfi">
+        <h2>Beyond Ice Cream</h2>
+        <div class="product-grid">
+          <!-- Kulfi Product Card 1 -->
+          <div class="product-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1mBC-EFDrjKu5Cc_IwCesYSgUL5qT0KfRQ&s"
+              alt="Badam Kulfi"
+            />
+            <h3>KESAR MILK MASALA
+</h3>
+            <!-- <p class="product-description">
+             No Description
+            </p> -->
+            <p class="price">₹70</p>
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+          </div>
+        
+          
+        </div>
+        <div class="view-all">
+          <a href="products.html#kulfi" class="btn btn-secondary">View All </a>
+        </div>
+      </section>
+      <!-- You can add more product categories here (e.g., "Special Desserts") -->
+    </main>
+
+    <!-- ==================== FOOTER (Common across pages) ==================== -->
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <div class="footer-section">
+          <!-- <h4><img src="Images/logo.jpeg" style="width: 100px;" alt=""></h4>
+                  -->
+
+          <h4>Kalyani Foods</h4>
+          <p>
+            Taste the tradition of pure dairy delights. Dedicated to quality and
+            deliciousness.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="franchise.html">Franchise</a></li>
+            <li><a href="gallery.html">gallery</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Your Address, City, State, ZIP
+          </p>
+          <p>
+            <i class="fas fa-phone"></i>
+            <a href="tel:+911234567890">+91 12345 67890</a>
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:info@kalyanifoods.co.in">info@kalyanifoods.co.in</a>
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a
+              href="https://facebook.com/kalyanifoods"
+              target="_blank"
+              aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://instagram.com/kalyanifoods"
+              target="_blank"
+              aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="whatsapp"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2024 Kalyani Foods. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Link to your custom JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>

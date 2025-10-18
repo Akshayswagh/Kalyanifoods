@@ -1,0 +1,162 @@
+/* ==================== Where to Buy Page Specific Styles ==================== */
+
+/* Hero Section */
+.buy-hero {
+  background: linear-gradient(
+      rgba(var(--primary-red-rgb), 0.7),
+      rgba(var(--primary-red-rgb), 0.7)
+    ),
+    url('https://via.placeholder.com/1200x300/e12c36/ffffff?text=Find+Our+Products')
+      center center/cover no-repeat;
+  color: var(--white);
+  padding: 3rem 1rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.buy-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.8rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.buy-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Shop Locations Section */
+.shop-locations-section {
+  margin-bottom: 3rem;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.shop-locations-section h2,
+.find-nearest-map h2 {
+  color: var(--secondary-dark);
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  text-align: center;
+  position: relative;
+}
+
+.shop-locations-section h2::after,
+.find-nearest-map h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-red);
+  margin: 0.8rem auto 0;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.shop-card {
+  background-color: var(--light-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes button to bottom */
+}
+
+.shop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.shop-card h3 {
+  color: var(--primary-red);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.shop-card p {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.shop-card p i {
+  margin-right: 0.8rem;
+  color: var(--secondary-dark);
+  font-size: 1.1rem;
+  width: 20px; /* Fixed width for icon to align text */
+  text-align: center;
+}
+
+.shop-card .btn-primary.btn-small {
+  margin-top: 1.2rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  align-self: flex-start; /* Align button to start within flex column */
+}
+
+/* Find Nearest Map Section */
+.find-nearest-map {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 3rem;
+}
+
+.find-nearest-map .map-container {
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+}
+
+.find-nearest-map iframe {
+  width: 100%;
+  height: 400px;
+  display: block;
+}
+
+.map-note {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.map-note a {
+  font-weight: bold;
+}
+
+/* ==================== Responsive Adjustments ==================== */
+
+@media (min-width: 768px) {
+  .shop-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on tablet */
+  }
+
+  .buy-hero h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .shop-grid {
+    grid-template-columns: repeat(3, 1fr); /* Three columns on desktop */
+  }
+
+  .buy-hero h1 {
+    font-size: 4rem;
+  }
+}

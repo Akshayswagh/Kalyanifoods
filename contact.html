@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Kalyani Foods</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to your main CSS for base styles, header, and footer -->
+    <link rel="stylesheet" href="contact.css" />
+    <!-- Link to the specific CSS for this page -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Font Awesome for icons -->
+  </head>
+  <body>
+  <!-- ==================== HEADER & NAVBAR (Common across pages) ==================== -->
+    <header class="main-header">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="Images/logo.jpeg" alt="logo" style="width: 100px"
+          /></a>
+          <!-- Your logo text or image here -->
+        </div>
+        <nav class="main-nav" id="mainNav">
+          <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="franchise.html">Franchise</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="nav-icons">
+          <div class="search-icon"><i class="fas fa-search"></i></div>
+          <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </div>
+          <div class="hamburger-menu" id="hamburgerMenu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="contact-page-content">
+      <div class="container">
+        <section class="contact-hero">
+          <h1>Get in Touch with Us</h1>
+          <p>We'd love to hear from you!</p>
+        </section>
+
+        <div class="contact-grid">
+          <section class="contact-form-section">
+            <h2>Enquiry</h2>
+            <form class="contact-form">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input
+                  type="tel"
+                  id="mobile"
+                  name="mobile"
+                  placeholder="Enter your mobile number"
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </section>
+
+          <section class="contact-info-section">
+            <h2>Reach Out To Us</h2>
+
+            <div class="info-block">
+              <h3><i class="fas fa-phone"></i> Phone</h3>
+              <ul>
+                <li>+91 9423460955</li>
+                <li>+91 9423344455</li>
+                <li>02482-261-155</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h3><i class="fas fa-envelope"></i> Email</h3>
+              <p>kalyanifoods1994@gmail.com</p>
+            </div>
+
+            <div class="info-block">
+              <h3><i class="fas fa-map-marker-alt"></i> Our Location</h3>
+              <p>
+                Kalyani Ice-cream Parlour, Jalna - Chhatrapati Sambhaji Nagar
+                Highway, BADNAPUR, Dist. Jalna (MH) 431202
+              </p>
+            </div>
+
+            <div class="info-block sweet-hours">
+              <h3><i class="fas fa-clock"></i> Sweet Hours</h3>
+              <p class="slogan">When Flavors Meet Time</p>
+              <div class="opening-hours">
+                <p><strong>Sunday:</strong> 08:00 AM - 11:30 AM</p>
+                <p><strong>Monday - Saturday:</strong> 08:00 AM - 08:00 PM</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="contact-map">
+          <h2>Find Us on the Map</h2>
+          <div class="map-container">
+            <!-- Google Map Embed Code -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15024.16010573983!2d75.76019325!3d19.86015555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd9690192e105e1%3A0xf67b7f1e7a6b8a8b!2sKalyani%20Ice-cream%20Parlour!5e0!3m2!1sen!2sin!4v1678912345678!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </section>
+      </div>
+    </main>
+
+     <!-- ==================== FOOTER (Common across pages) ==================== -->
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <div class="footer-section">
+          <!-- <h4><img src="Images/logo.jpeg" style="width: 100px;" alt=""></h4>
+                  -->
+
+          <h4>Kalyani Foods</h4>
+          <p>
+            Taste the tradition of pure dairy delights. Dedicated to quality and
+            deliciousness.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="franchise.html">Franchise</a></li>
+            <li><a href="gallery.html">gallery</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Your Address, City, State, ZIP
+          </p>
+          <p>
+            <i class="fas fa-phone"></i>
+            <a href="tel:+911234567890">+91 12345 67890</a>
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:info@kalyanifoods.co.in">info@kalyanifoods.co.in</a>
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a
+              href="https://facebook.com/kalyanifoods"
+              target="_blank"
+              aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://instagram.com/kalyanifoods"
+              target="_blank"
+              aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="whatsapp"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2024 Kalyani Foods. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+<script src="script.js"></script>
+  </body>
+</html>

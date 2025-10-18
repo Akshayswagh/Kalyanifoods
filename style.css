@@ -1,0 +1,622 @@
+/* ==================== Base Styles & Variables ==================== */
+:root {
+  --primary-red: #e12c36; /* Your brand red */
+  --secondary-dark: #333;
+  --text-color: #555;
+  --light-bg: #f8f8f8;
+  --white: #fff;
+  --border-color: #eee;
+  --transition-speed: 0.3s ease;
+  --max-width: 1200px;
+  --primary-red-rgb: 225, 44, 54;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--light-bg);
+}
+
+/* Prevents scrolling when mobile nav is open */
+body.no-scroll {
+  overflow: hidden;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem; /* Padding for mobile screens */
+}
+
+a {
+  color: var(--primary-red);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--secondary-dark);
+}
+
+ul {
+  list-style: none;
+}
+
+/* ==================== Utility Classes ==================== */
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color var(--transition-speed),
+    color var(--transition-speed);
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-red);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: #b8232c; /* Darker red on hover */
+  color: var(--white);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-dark);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: #555;
+}
+
+.btn-add-to-cart {
+  background-color: var(--primary-red);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  width: 100%; /* Full width on product cards */
+}
+
+.btn-add-to-cart:hover {
+  background-color: #b8232c;
+}
+
+/* ==================== Header & Navbar ==================== */
+.main-header {
+  background-color: var(--white);
+  padding: 0.5rem 0 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky; /* Make header sticky */
+  top: 0;
+  z-index: 1000;
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.logo a {
+  color: var(--primary-red);
+  text-decoration: none;
+}
+
+/* Mobile Navigation */
+.main-nav {
+  display: block; /* Always block for the slide effect */
+  position: fixed;
+  top: 0;
+  left: -100%; /* Off-screen by default */
+  width: 75%; /* Slightly wider */
+  max-width: 300px; /* Cap max width on larger mobile devices */
+  height: 100vh;
+  background-color: var(--secondary-dark);
+  color: var(--white);
+  padding-top: 5rem; /* Space for logo/header if needed */
+  transition: left var(--transition-speed);
+  z-index: 1050; /* Higher than other content, below overlay */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.main-nav.active {
+  left: 0; /* Slide in */
+}
+
+/* Overlay that appears when mobile nav is open */
+.main-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1040; /* Below nav, above main content */
+  display: none; /* Hidden by default */
+}
+
+.main-nav-overlay.active {
+  display: block; /* Show when nav is active */
+}
+
+.nav-links {
+  padding: 0;
+  margin-top: 1rem; /* Space from top padding */
+}
+
+.nav-links li {
+  margin-bottom: 0.5rem;
+}
+
+/* Mobile Navigation - active link style (no underline animation here) */
+.nav-links a {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  color: var(--white);
+  font-size: 1.1rem;
+  transition: background-color var(--transition-speed);
+  white-space: nowrap;
+  position: relative; /* Needed for ::after pseudo-element positioning */
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: var(--primary-red);
+  color: var(--white);
+  /* Mobile active state, background color is enough */
+}
+
+.nav-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-shrink: 0; /* Prevent icons from shrinking */
+}
+
+.nav-icons div {
+  font-size: 1.4rem;
+  cursor: pointer;
+  position: relative;
+  color: var(--secondary-dark);
+}
+
+.cart-count {
+  background-color: var(--primary-red);
+  color: var(--white);
+  font-size: 0.7rem;
+  border-radius: 50%;
+  padding: 0.2em 0.4em;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  line-height: 1;
+}
+
+.hamburger-menu {
+  display: block; /* Always visible on mobile */
+  font-size: 1.5rem; /* Make it a bit larger */
+  z-index: 1060; /* Higher than nav and overlay so it's always clickable */
+  position: relative; /* To ensure z-index works reliably */
+}
+
+/* ==================== Hero Carousel ==================== */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Adjust height as needed */
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.carousel-inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-align: center;
+  position: relative;
+}
+
+.carousel-item::before {
+  /* Overlay for better text readability */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(135, 78, 78, 0.4); */
+}
+
+.carousel-content {
+  position: relative;
+  z-index: 1;
+  padding: 1rem;
+  max-width: 800px;
+}
+
+.carousel-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--white);
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color var(--transition-speed);
+}
+
+.carousel-control:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-control.prev {
+  left: 10px;
+  border-radius: 0 5px 5px 0;
+}
+
+.carousel-control.next {
+  right: 10px;
+  border-radius: 5px 0 0 5px;
+}
+
+/* ==================== Product Category Sections ==================== */
+.content-area {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.product-category {
+  margin-bottom: 3rem;
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.product-category h2 {
+  text-align: center;
+  color: var(--primary-red);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  position: relative;
+}
+
+.product-category h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-red);
+  margin: 0.5rem auto 0;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(180px, 1fr)
+  ); /* Responsive grid */
+  gap: 1.5rem;
+}
+
+.product-card {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-speed);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 120px; /* Fixed height for consistent look */
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  color: var(--secondary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.product-card .product-description {
+  font-size: 0.85rem;
+  color: var(--text-color);
+  height: 3em; /* Limit height to show 2-3 lines */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for hidden text */
+  margin-bottom: 0.8rem;
+  padding: 0 0.5rem; /* Small horizontal padding */
+}
+
+.product-card .price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--primary-red);
+  margin-bottom: 0.8rem;
+}
+
+.product-category .view-all {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+/* ==================== Footer ==================== */
+.main-footer {
+  background-color: var(--secondary-dark);
+  color: var(--white);
+  padding: 3rem 0 1rem;
+  font-size: 1rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+  color: var(--primary-red);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: var(--white);
+  transition: color var(--transition-speed);
+}
+
+.footer-section a:hover {
+  color: var(--primary-red);
+}
+
+.footer-section p {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section i {
+  margin-right: 0.5rem;
+}
+
+.social-links a {
+  display: inline-block;
+  color: var(--white) !important; /* Changed to white */
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  transition: color var(--transition-speed) !important;
+}
+
+.social-links a:hover {
+  color: var(
+    --primary-red
+  ) !important; /* Changes to your primary red on hover */
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+  text-align: center;
+}
+
+/* ==================== Media Queries for Responsiveness ==================== */
+
+/* Tablet and larger screens (e.g., > 768px) */
+@media (min-width: 768px) {
+  .main-header .container {
+    display: grid;
+    /* Adjusted grid columns: logo | main-nav (takes more space) | nav-icons */
+    /* Increased fractional unit for main-nav to give it more room to justify right */
+    grid-template-columns: 2fr auto auto; /* Give main nav 2 times more space */
+    align-items: center; /* Center items vertically */
+    gap: 1.5rem;
+  }
+
+  .main-nav {
+    position: static; /* Not fixed */
+    display: block; /* Always visible */
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    color: var(--text-color);
+    padding-top: 0;
+    /* Changed text-align back to right */
+    text-align: right; /* Align links to the right within its allocated grid space */
+    box-shadow: none; /* No shadow on desktop */
+  }
+
+  .main-nav.active {
+    left: auto;
+  }
+
+  .main-nav-overlay {
+    display: none !important; /* Force hide overlay on desktop */
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
+    gap: 1.5rem;
+  }
+
+  .nav-links li {
+    margin-bottom: 0;
+  }
+
+  .nav-links a {
+    padding: 0;
+    color: var(--secondary-dark);
+    background-color: transparent;
+    white-space: nowrap;
+    position: relative; /* Ensure position for the underline pseudo-element */
+    /* To prevent text "jumping" when underline appears */
+    padding-bottom: 7px; /* Make room for the underline */
+  }
+
+  /* Main underline element with enhanced animation */
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px; /* Slightly thicker for better visibility */
+    background: var(--primary-red); /* Solid red color */
+    border-radius: 2px 2px 0 0; /* Rounded top edges */
+
+    /* Enhanced animation properties */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1); /* Smooth easing function */
+  }
+
+  /* Hover effect - slide in from left */
+  .nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  /* Active state - permanent underline with subtle pulse effect */
+  .nav-links a.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    animation: gentlePulse 2s ease-in-out infinite;
+  }
+
+  /* Additional hover effect for the text itself */
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--primary-red);
+    background-color: transparent;
+  }
+
+  /* Text color change on hover/active for desktop */
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(
+      --primary-red
+    ); /* Text color also changes to red on hover/active */
+    background-color: transparent;
+  }
+
+  .hamburger-menu {
+    display: none; /* Hide hamburger on larger screens */
+  }
+
+  .carousel-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .carousel-content p {
+    font-size: 1.5rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(220px, 1fr)
+    ); /* More columns on tablet */
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(200px, 1fr)
+    ); /* Multi-column footer */
+  }
+}
+
+/* Desktop and larger screens (e.g., > 1024px) */
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  .nav-icons div {
+    font-size: 1.4rem;
+  }
+
+  .hero-carousel {
+    height: 70vh; /* Taller hero on desktop */
+  }
+
+  .carousel-content h1 {
+    font-size: 4.5rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr); /* 4 columns for products */
+  }
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for footer */
+  }
+}

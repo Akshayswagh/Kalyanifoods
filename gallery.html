@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - Kalyani Ice Cream Parlour</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" /> <!-- Your global styles for navbar, footer, etc. -->
+  <link rel="stylesheet" href="gallery.css" /> <!-- Gallery page specific styles -->
+</head>
+
+  <body>
+    <!-- HEADER & NAVBAR will go here (from your existing structure) -->
+    <!-- ==================== HEADER & NAVBAR (Common across pages) ==================== -->
+    <header class="main-header">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="Images/logo.jpeg" alt="logo" style="width: 100px"
+          /></a>
+        </div>
+        <nav class="main-nav" id="mainNav">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="gallery.html">gallery</a></li>
+            <li><a href="franchise.html">Franchise</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="nav-icons">
+          <div class="search-icon"><i class="fas fa-search"></i></div>
+          <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </div>
+          <div class="hamburger-menu" id="hamburgerMenu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="gallery-hero">
+        <div class="hero-content">
+          <h1 class="fade-in-up">
+            Our Sweet Journey: A Glimpse Behind the Scenes
+          </h1>
+          <p class="fade-in-up delay-1">
+            "Made with love and care, just at Kalyani Food Products!"
+          </p>
+        </div>
+      </section>
+
+      <section class="gallery-intro content-area reveal-on-scroll">
+        <h2>From Our Kitchen to Your Heart</h2>
+        <p>
+          Take a peek into our kitchen and factory where the magic happens! From
+          the finest ingredients to the perfect freeze, our ice cream and ice
+          lollies are crafted with care, precision, and passion. Explore the
+          process that brings these sweet delights to life.
+        </p>
+        <p>
+          We believe in transparency and the joy of creation. Witness the
+          dedication of our team and the quality processes that ensure every
+          scoop and every lolly is a moment of pure bliss.
+        </p>
+      </section>
+
+      <section class="image-gallery content-area">
+        <h2 class="reveal-on-scroll">The Crafting Process</h2>
+        <div class="gallery-grid">
+          <!-- Gallery Item 1: Ingredients -->
+          <div class="gallery-item reveal-on-scroll fade-in-up">
+            <img
+              src="Images/gallery/raw-materials.jpeg"
+              alt="Finest Raw Materials"
+              loading="lazy"
+            />
+            <div class="caption">
+              <h3>Finest Ingredients</h3>
+              <p>Sourcing premium milk, fresh fruits, and natural flavors.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 2: Mixing -->
+          <div class="gallery-item reveal-on-scroll fade-in-up delay-1">
+            <img
+              src="Images/gallery/mixing.jpeg"
+              alt="Mixing Ingredients"
+              loading="lazy"
+            />
+            <div class="caption">
+              <h3>Expert Mixing</h3>
+              <p>Blending ingredients to perfection in our modern mixers.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 3: Pasteurization -->
+          <div class="gallery-item reveal-on-scroll fade-in-up delay-2">
+            <img
+              src="Images/gallery/pasteurization.jpeg"
+              alt="Pasteurization Process"
+              loading="lazy"
+            />
+            <div class="caption">
+              <h3>Gentle Pasteurization</h3>
+              <p>Ensuring safety and quality without compromising taste.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 4: Freezing/Churning -->
+          <div class="gallery-item reveal-on-scroll fade-in-up delay-3">
+            <img
+              src="Images/gallery/churning.jpeg"
+              alt="Ice Cream Churning"
+              loading="lazy"
+            />
+            <div class="caption">
+              <h3>Perfect Churning</h3>
+              <p>Slow churning for that signature creamy texture.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 5: Molding/Shaping (for Lollies) -->
+          <div class="gallery-item reveal-on-scroll fade-in-up">
+            <img
+              src="Images/gallery/molding-lollies.jpeg"
+              alt="Ice Lolly Molding"
+              loading="lazy"
+            />
+            <div class="caption">
+              <h3>Lolly Perfection</h3>
+              <p>Shaping and freezing our refreshing ice lollies.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 6: Quality Check -->
+          <div class="gallery-item reveal-on-scroll fade-in-up delay-1">
+            <img
+              src="Images/gallery/quality-check.jpeg"
+              alt="Quality Control"
+              loading="lazy"
+            />
+            <div class="caption">
+              <h3>Rigorous Quality Checks</h3>
+              <p>Every batch meticulously inspected for excellence.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 7: Packaging -->
+          <div class="gallery-item reveal-on-scroll fade-in-up delay-2">
+            <img
+              src="Images/gallery/packaging.jpeg"
+              alt="Packaging Ice Cream"
+              loading="lazy"
+            />
+            <div class="caption">
+              <h3>Secure Packaging</h3>
+              <p>Sealing in freshness and flavor for you to enjoy.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 8: Storage/Distribution -->
+          <div class="gallery-item reveal-on-scroll fade-in-up delay-3">
+            <img
+              src="Images/gallery/distribution.jpeg"
+              alt="Ice Cream Distribution"
+              loading="lazy"
+            />
+            <div class="caption">
+              <h3>Ready for Delivery</h3>
+              <p>Carefully stored and dispatched to reach you perfectly.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="call-to-action content-area reveal-on-scroll">
+        <h2>Experience the Kalyani Difference</h2>
+        <p>
+          Our commitment to quality and taste is in every product. Discover your
+          next favorite treat today!
+        </p>
+        <a href="products.html" class="btn btn-primary">Explore Our Products</a>
+      </section>
+    </main>
+
+    <!-- FOOTER will go here (from your existing structure) -->
+    <!-- ==================== FOOTER (Common across pages) ==================== -->
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <div class="footer-section">
+          <h4>Kalyani Foods</h4>
+          <p>
+            Taste the tradition of pure dairy delights. Dedicated to quality and
+            deliciousness.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="bulk-order.html">Bulk Order</a></li>
+            <li><a href="franchise.html">Franchise</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Your Address, City, State, ZIP
+          </p>
+          <p>
+            <i class="fas fa-phone"></i>
+            <a href="tel:+911234567890">+91 12345 67890</a>
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:info@kalyanifoods.co.in">info@kalyanifoods.co.in</a>
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a
+              href="https://facebook.com/kalyanifoods"
+              target="_blank"
+              aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://instagram.com/kalyanifoods"
+              target="_blank"
+              aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2024 Kalyani Foods. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

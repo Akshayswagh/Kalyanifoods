@@ -1,0 +1,363 @@
+/* ========================================================================== */
+/*           Gallery Page Specific Styles - Mobile-First Approach             */
+/* ========================================================================== */
+
+/* --- Base Variables (Ensure these match your global style.css if applicable) --- */
+:root {
+    --primary-red: #E12C36;
+    --secondary-dark: #333;
+    --text-color: #555;
+    --light-bg: #f8f8f8;
+    --white: #fff;
+    --border-color: #eee;
+    --transition-speed: 0.3s ease;
+    --max-width: 1200px;
+    --primary-red-rgb: 225, 44, 54; /* For rgba() usage */
+}
+
+/* --- General Content Area Styling (reused from about.css) --- */
+.content-area {
+    padding: 1.5rem 1rem; /* Smaller padding for mobile screens */
+    overflow-x: hidden; /* Prevent horizontal scroll due to animations */
+}
+
+/* --- Section Headings (reused from about.css) --- */
+.content-area h2 {
+    text-align: center;
+    color: var(--primary-red);
+    font-size: 1.8rem; /* Smaller font for mobile */
+    margin-bottom: 1.5rem;
+    position: relative;
+    line-height: 1.3;
+}
+
+.content-area h2::after {
+    content: '';
+    display: block;
+    width: 60px; /* Shorter underline */
+    height: 3px; /* Thinner underline */
+    background-color: var(--primary-red);
+    margin: 0.8rem auto 0;
+    border-radius: 1.5px;
+}
+
+.content-area p {
+    font-size: 0.95rem; /* Smaller font for mobile paragraphs */
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 0.8rem;
+}
+
+
+/* --- Gallery Hero Section --- */
+.gallery-hero {
+    position: relative;
+    height: 40vh; /* Shorter height for mobile */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    /* Placeholder image for factory/kitchen - replace with your actual image */
+    background: url('https://source.unsplash.com/800x450/?ice-cream-factory-interior,production') no-repeat center center/cover;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.gallery-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly darker overlay for text readability */
+    z-index: 1;
+}
+
+.gallery-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0.5rem;
+    max-width: 90%;
+}
+
+.gallery-hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    line-height: 1.2;
+}
+
+.gallery-hero p {
+    font-size: 1rem;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* --- Gallery Introduction Section --- */
+.gallery-intro {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+    margin-bottom: 2rem;
+    text-align: center; /* Center text for intro */
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.gallery-intro.animate-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* --- Image Gallery Grid --- */
+.image-gallery {
+    padding-bottom: 3rem; /* Extra padding at bottom */
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 1.5rem; /* Space between gallery items */
+    margin-top: 1.5rem;
+}
+
+.gallery-item {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.image-gallery.animate-active .gallery-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Animation delays for sequential appearance */
+.image-gallery.animate-active .gallery-item:nth-child(1) { transition-delay: 0s; }
+.image-gallery.animate-active .gallery-item:nth-child(2) { transition-delay: 0.05s; }
+.image-gallery.animate-active .gallery-item:nth-child(3) { transition-delay: 0.1s; }
+.image-gallery.animate-active .gallery-item:nth-child(4) { transition-delay: 0.15s; }
+.image-gallery.animate-active .gallery-item:nth-child(5) { transition-delay: 0.2s; }
+.image-gallery.animate-active .gallery-item:nth-child(6) { transition-delay: 0.25s; }
+.image-gallery.animate-active .gallery-item:nth-child(7) { transition-delay: 0.3s; }
+.image-gallery.animate-active .gallery-item:nth-child(8) { transition-delay: 0.35s; }
+
+
+.gallery-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency on mobile */
+    object-fit: cover; /* Cover ensures image fills the space without distortion */
+    display: block; /* Remove extra space below image */
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.03); /* Subtle zoom on hover */
+}
+
+.gallery-item .caption {
+    padding: 1rem;
+    text-align: center;
+}
+
+.gallery-item .caption h3 {
+    font-size: 1.2rem;
+    color: var(--secondary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.gallery-item .caption p {
+    font-size: 0.85rem;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* --- Call to Action Section --- */
+.call-to-action {
+    background-color: var(--primary-red);
+    color: var(--white);
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.call-to-action.animate-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.call-to-action h2 {
+    color: var(--white); /* Override general h2 color */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.call-to-action h2::after {
+    background-color: var(--white); /* White underline for contrast */
+}
+
+.call-to-action p {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.call-to-action .btn {
+    background-color: var(--white);
+    color: var(--primary-red);
+    padding: 0.8rem 1.8rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.call-to-action .btn:hover {
+    background-color: #f0f0f0; /* Slight gray on hover */
+    color: var(--primary-red);
+}
+
+
+/* --- Animation Keyframes (reused) --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Apply fade-in-up to elements that need it, with optional delays */
+.fade-in-up { animation: fadeInUp 0.7s ease-out forwards; }
+.fade-in-up.delay-1 { animation-delay: 0.15s; }
+.fade-in-up.delay-2 { animation-delay: 0.3s; }
+.fade-in-up.delay-3 { animation-delay: 0.45s; }
+
+
+/* ========================================================================== */
+/*                Media Queries for Larger Screens (Mobile-First)             */
+/* ========================================================================== */
+
+/* --- Tablet and Small Desktops (min-width: 768px) --- */
+@media (min-width: 768px) {
+    .content-area {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .content-area h2 {
+        font-size: 2.5rem;
+    }
+    .content-area h2::after {
+        width: 80px;
+        height: 4px;
+    }
+    .content-area p {
+        font-size: 1rem;
+    }
+
+    .gallery-hero {
+        height: 50vh;
+        margin-bottom: 3rem;
+        background-image: url('https://source.unsplash.com/1200x675/?ice-cream-factory-interior,production');
+    }
+    .gallery-hero h1 {
+        font-size: 3.5rem;
+    }
+    .gallery-hero p {
+        font-size: 1.5rem;
+    }
+
+    .gallery-intro {
+        padding: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on tablet */
+        gap: 2rem;
+    }
+    .gallery-item img {
+        height: 250px; /* Taller images */
+    }
+    .gallery-item .caption h3 {
+        font-size: 1.4rem;
+    }
+    .gallery-item .caption p {
+        font-size: 0.95rem;
+    }
+
+    .call-to-action {
+        padding: 3rem 2rem;
+    }
+    .call-to-action h2 {
+        font-size: 2.5rem;
+    }
+    .call-to-action p {
+        font-size: 1.1rem;
+    }
+    .call-to-action .btn {
+        padding: 1rem 2.2rem;
+        font-size: 1.2rem;
+    }
+}
+
+/* --- Desktop (min-width: 1024px) --- */
+@media (min-width: 1024px) {
+    .content-area {
+        padding: 3rem 2rem;
+    }
+
+    .gallery-hero {
+        height: 60vh;
+        background-image: url('https://source.unsplash.com/1600x900/?ice-cream-factory-interior,production');
+    }
+    .gallery-hero h1 {
+        font-size: 4.5rem;
+    }
+    .gallery-hero p {
+        font-size: 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three columns on desktop */
+        gap: 2.5rem;
+    }
+    .gallery-item img {
+        height: 280px; /* Even taller images */
+    }
+
+    .call-to-action h2 {
+        font-size: 3rem;
+    }
+    .call-to-action p {
+        font-size: 1.2rem;
+    }
+}
+
+/* --- Large Desktop (min-width: 1200px) --- */
+@media (min-width: 1200px) {
+    .content-area {
+        padding: 3rem 0; /* Centralize content within max-width */
+        max-width: var(--max-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr); /* Four columns on very large screens */
+    }
+}
