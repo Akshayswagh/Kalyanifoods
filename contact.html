@@ -13,6 +13,53 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <!-- Font Awesome for icons -->
+  
+  <style>
+
+    /* contact btn style techincal issue */
+    
+        /* Style for the inline popup/message */
+        .issue-message {
+            display: none; /* Hidden by default */
+            position: absolute; /* Position relative to its closest positioned ancestor */
+            background-color: #f8d7da; /* Light red background for error */
+            color: #721c24; /* Dark red text */
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin-top: 5px; /* Space between button and message */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000; /* Ensure it's on top */
+            max-width: 250px; /* Limit width */
+            line-height: 1.4;
+        }
+
+        .issue-message p {
+            margin-bottom: 8px;
+            font-size: 0.9em;
+        }
+
+        .issue-message .btn-call {
+            display: inline-block;
+            background-color: #007bff; /* Blue button */
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.85em;
+            transition: background-color 0.2s;
+        }
+
+        .issue-message .btn-call:hover {
+            background-color: #0056b3;
+        }
+
+        /* To position the message relative to the button's parent */
+        .button-container {
+            position: relative;
+            display: inline-block; /* Allows text and button to be on the same line if needed */
+        }
+  </style>
   </head>
   <body>
   <!-- ==================== HEADER & NAVBAR (Common across pages) ==================== -->
@@ -36,9 +83,11 @@
         </nav>
         <div class="nav-icons">
           <div class="search-icon"><i class="fas fa-search"></i></div>
-          <div class="cart-icon">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="cart-count">0</span>
+         <div class="cart-icon">
+            <a href="cart.html"
+              ><i class="fas fa-shopping-cart"></i
+              ><span class="cart-count">0</span></a
+            >
           </div>
           <div class="hamburger-menu" id="hamburgerMenu">
             <i class="fas fa-bars"></i>
@@ -97,7 +146,14 @@
                   required
                 ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Send Message</button>
+   <div class="button-container">
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <div id="issueMessage" class="issue-message">
+            <p>Some technical issue. Please try again or</p>
+            <a href="tel:+919423460955" class="btn-call">Call Now</a>
+        </div>
+    </div>
+
             </form>
           </section>
 
@@ -249,11 +305,55 @@
       </div>
       <div class="footer-bottom">
         <div class="container">
-          <p>&copy; 2024 Kalyani Foods. All rights reserved.</p>
+          <p>&copy; 2025 Kalyani Foods. All rights reserved.</p>
         </div>
       </div>
     </footer>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sendMessageBtn = document.querySelector('button[type="submit"].btn-primary');
+            const issueMessageDiv = document.getElementById('issueMessage');
 
+            if (sendMessageBtn && issueMessageDiv) {
+                sendMessageBtn.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default form submission
+
+                    // Toggle the display of the issue message
+                    if (issueMessageDiv.style.display === 'block') {
+                        issueMessageDiv.style.display = 'none'; // Hide if already visible
+                    } else {
+                        issueMessageDiv.style.display = 'block'; // Show if hidden
+
+                        // Optional: Position the message dynamically relative to the button
+                        // This uses getBoundingClientRect to get button's position
+                        const btnRect = sendMessageBtn.getBoundingClientRect();
+                        const containerRect = sendMessageBtn.parentElement.getBoundingClientRect();
+
+                        issueMessageDiv.style.top = (btnRect.bottom - containerRect.top + 5) + 'px'; // Below the button
+                        issueMessageDiv.style.left = (btnRect.left - containerRect.left) + 'px'; // Align with button's left edge
+                    }
+                });
+
+                // Optional: Hide the message if clicked anywhere else on the document
+                document.addEventListener('click', function(event) {
+                    if (issueMessageDiv.style.display === 'block' &&
+                        !issueMessageDiv.contains(event.target) &&
+                        !sendMessageBtn.contains(event.target)) {
+                        issueMessageDiv.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+    <!-- Optional: Bootstrap JS if you used Bootstrap for the button style -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
+<script>
+  //  contact form btn submit action
+  
+
+
+
+</script>
   </body>
 </html>
