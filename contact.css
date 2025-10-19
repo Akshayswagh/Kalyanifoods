@@ -144,6 +144,23 @@
 .info-block ul li {
   margin-bottom: 0.4rem;
 }
+.email-link {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.email-link:hover {
+  color: #e63946; /* reddish on hover */
+}.phone-list a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.phone-list a:hover {
+  color: #e63946; /* reddish on hover */
+}
 
 .info-block .slogan {
   font-style: italic;

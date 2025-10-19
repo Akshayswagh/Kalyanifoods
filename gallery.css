@@ -3,17 +3,6 @@
 /* ========================================================================== */
 
 /* --- Base Variables (Ensure these match your global style.css if applicable) --- */
-:root {
-    --primary-red: #E12C36;
-    --secondary-dark: #333;
-    --text-color: #555;
-    --light-bg: #f8f8f8;
-    --white: #fff;
-    --border-color: #eee;
-    --transition-speed: 0.3s ease;
-    --max-width: 1200px;
-    --primary-red-rgb: 225, 44, 54; /* For rgba() usage */
-}
 
 /* --- General Content Area Styling (reused from about.css) --- */
 .content-area {
@@ -334,7 +323,7 @@
     }
 
     .gallery-grid {
-        grid-template-columns: repeat(3, 1fr); /* Three columns on desktop */
+        grid-template-columns: repeat(2, 1fr); /* Three columns on desktop */
         gap: 2.5rem;
     }
     .gallery-item img {
@@ -358,6 +347,6 @@
         margin-right: auto;
     }
     .gallery-grid {
-        grid-template-columns: repeat(4, 1fr); /* Four columns on very large screens */
+        grid-template-columns: repeat(2, 1fr); /* Four columns on very large screens */
     }
 }
